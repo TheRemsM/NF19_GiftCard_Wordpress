@@ -13,12 +13,16 @@ else
 	cat wpTar.parta* > wpTar.joined
 	
 	tar -xvf wpTar.joined
+	
+	mkdir $HOME/dataSiteWp
 
 	mv datadb $HOME/dataSiteWp/datadb
 	
 	mv datawp $HOME/dataSiteWp/datawp
 	
 	rm wpTar.parta*
+	
+	rm wpTar.joined
 	
 	docker pull therems/giftcardwordpresssetup:wordpress
 
